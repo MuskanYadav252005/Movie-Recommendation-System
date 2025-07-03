@@ -6,7 +6,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import os
 
-print("📦 Script started...")
+print(" Script started...")
 
 # Load datasets
 movies = pd.read_csv('tmdb_5000_movies.csv')
@@ -71,13 +71,13 @@ sim_path = r'C:\Movie-Recommendation-System\similarity.pkl'
 try:
     with open(dict_path, 'wb') as f:
         pickle.dump(new.to_dict(), f)
-    print(f"✅ Saved movies_dict.pkl at: {dict_path}")
+    print(f" Saved movies_dict.pkl at: {dict_path}")
 except Exception as e:
     print(f"❌ Failed to save movies_dict.pkl: {e}")
 
 try:
     with open(sim_path, 'wb') as f:
         pickle.dump(similarity, f)
-    print(f"✅ Saved similarity.pkl at: {sim_path}")
+    print(f" Saved similarity.pkl at: {sim_path}")
 except Exception as e:
-    print(f"❌ Failed to save similarity.pkl: {e}")
+    print(f" Failed to save similarity.pkl: {e}")
